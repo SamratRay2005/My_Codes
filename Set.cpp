@@ -47,7 +47,7 @@ int main()
 	s.erase(++it);
 	printset(s);
 
-	//element 5 is presint or not
+	//element 5 is present or not
 	// 1=>yes
 	//0=>no
 	cout <<"Element 5 present? "<<s.count(5)<<endl;
