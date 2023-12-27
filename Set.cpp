@@ -36,21 +36,30 @@ int main()
 
 	// erase operation
 	s.erase(s.begin());
+	cout << "Erased new set => ";
 	printset(s);
 
 	//again inserting the  element 1
 	s.insert(1);
+	cout << "Again adding the velue=> new set =>  ";
+	printset(s);
 
 
+	
 	// deleting the 2nd element=>5
 	auto it = s.begin();
 	s.erase(++it);
+	cout << endl << endl <<"Again deleting 5=> ";
 	printset(s);
 
 	//element 5 is present or not
 	// 1=>yes
 	//0=>no
 	cout <<"Element 5 present? "<<s.count(5)<<endl;
+
+
+	//number of element in set
+	cout << "Number of elements(1,7)=> " << s.size()<<endl;
 
 
 
