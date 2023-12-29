@@ -132,9 +132,18 @@ int length(link p)
 }
 
 
-// inserting operation
+// inserting operation 
 void insert(link p , int id)
 {
+    if (id == 1)
+    {
+        link k = (link)malloc(sizeof(element));
+        cout << "Enter the new data "<<endl;
+        cin >>k->data;
+        k->next = head;
+        head = k;
+        return;
+    }
      while (id!=2)
     {
         p = p->next;
