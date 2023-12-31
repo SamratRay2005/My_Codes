@@ -18,7 +18,7 @@ int main()
 	l.push_back(1);
 	printlist(l);
 
-	// adding a element to the back of the list
+	// adding a element to the front of the list
 	l.push_front(2);
 	printlist(l);
 
