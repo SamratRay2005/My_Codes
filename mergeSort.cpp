@@ -2,7 +2,6 @@
 using namespace std;
 void merge(int arr[] , int s , int e)
 {
-	// sort(arr+s,arr+e+1);
 	int mid = s + (e-s)/2;
 	int left_end = mid;
 	int l1 = mid-s+1;
