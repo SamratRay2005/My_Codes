@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+      <!--  This is used to comment out the lines -->
+     <!-- NOTE -->
+          <!-- DIFFERENCE BETWEEN H1 AND HEADER-->
+          <!--
+               The head element contains meta data about the document. 
+               The header element contains any items that should contain introductory information and often includes things like h1 elements, logos, and things about the author or company. 
+               Very often, it will also contain a navigation bar. 
+               The h1 tag stands for heading and helps to structure your document and tell web browsers/screen readers and others the importance of that element.
+          -->
+
+     <style>
+          #id1{
+               color:red
+          }
+          /* for table we will add border */
+          /* text align center align the data at the center */
+          /* border collapse helps to collapse the border */
+          table, tr, td ,th{
+               border: 1px solid black;
+               border-collapse: collapse;
+               text-align: center;
+          }  
+          html{
+               scroll-behavior: smooth;
+          }   
+          /* for div we will add color */
+          /* all div tag became yellow  */
+          div{
+               background-color: yellow;
+          }
+          /* for accessing a class we need a . */
+          .a{
+               background-color: pink;
+          }
+     </style>
+     
+     
+          
+     <head>
+          <title>Html Learning</title>
+          <!-- mata tag -> define metadata about html doc. The data that is displayed at the bottom of website comes from metadata. Always inside head. Used to specify charecter set, page description, key word, author , view port, not displayed. -->
+          <!-- displayed area is known view port-->
+           <meta name="viewport" content="width=device-width, initial-scale=100">
+          <meta charset= "utf-8">
+          <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20190226/ourmid/pngtree-fire-logo-icon-design-template-vector-png-image_705402.jpg">
+
+          
+      </head>
+ <body>
+     <!-- header tag is used to give introductory part-->
+     <header>
+          <p>Its the header</p>
+     </header>
+     <hr>
+      <!-- <nav> tag is used as navigational link-->
+          <nav>
+               <p>inside nav</p>
+               <a href="#1">Go to pic of into the forest of fireflies</a>
+               <p>Inside nav</p>
+          </nav>
+          <hr>
+          <p>outside nav</p>
+          
+          <br/>
+          <a href="#2">Go to near the last</a>
+         <h1>This is my first step into HTML</h1>
+          <h1>Heading</h1>
+          <h2>Heading</h2>
+          <h3>Heading</h3>
+          <h4>Heading</h4>
+          <h5>Heading</h5>
+          <h6>Heading</h6>
+          <p>This is a paragraph</p>
+          <div id = "fir">This is a div tag</div> <!-- Div => customisation from our side-->
+          <br/>
+          <!-- List=> 1>Ordered 2>Unordered 3> Descripion-->
+          <h1> Making a list </h1>
+          <p>Ordered List</p>
+          <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+          </ol>
+          <br/>
+          <p>Unordered List</p>
+          <ul>
+               <li>First</li>
+               <li>Second</li>
+               <li>Third</li>
+          </ul> 
+          <br/>
+          <!--Image printing-->
+          <img src="https://c4.wallpaperflare.com/wallpaper/570/557/268/tokyo-ghoul-kaneki-widescreen-desktop-wallpaper-preview.jpg" alt="Ken Kaneki" width="400" height="400">
+           <!--Alt Attribute show alt text instead of pic if the pic cannot be printed -->
+
+           <!--
+               id -> all element
+               class -> all element
+               src -> img
+               href -> a tag
+           -->
+            <br/>
+            <br/>
+            <hr>
+
+            <!-- horizontal rule -> draws a line along the page -->
+            <hr>
+
+            <br/>
+            <br/>
+            <div id="id1">Use of Div</div>
+            <br/>
+            <p>Making link</p>
+            <a href="https://www.youtube.com/watch?v=by4SYYWlhEs"  target="_blank">Good Song</a>
+            <!-- head contain meta data about html doc -->
+          <hr>
+          <hr>
+            <br/>
+            <br/>
+            <!-- image taken from web-->
+            <img id="1" src="https://i.pinimg.com/736x/2e/ce/cc/2ececc42bd4e1498573ed5c10eafff2e.jpg" alt="Into the forest of fireflies" height="600" width="400">
+
+            <br/>
+            <!-- 
+                   <p>
+                    hi
+                    my 
+                    name
+                    is 
+                    Samrat
+                   </p>
+
+
+                    the whole text is printed in a stringht line
+
+                    for different way of writting in different line we ca use:-
+                    1><p>
+                    hi<br>
+                    my <br>
+                    name<br>
+                    is <br>
+                    Samrat<br>
+                    </p>  
+
+                    OR
+
+                    2>
+                    <pre>
+                    hi
+                    my
+                    name 
+                    is 
+                    Samrat
+                    </pre>
+            -->
+               <p>
+               hi<br>
+               my <br>
+               name<br>
+               is <br>
+               Samrat<br>
+               </p>
+
+               <br/>
+               <br/>
+
+<pre>
+hi
+my
+name 
+is 
+Samrat
+</pre>
+
+         <!-- USING IN LINE CSS -->
+         <p style="color:red">Using inline CSS</p>
+         <p style="background-color:yellow">Using inline CSS </p> 
+         <p style="font-size: 50px">Using inline CSS </p>
+         <p style="font-family:fantasy">Using inline CSS </p>   
+         <p style ="text-align: center;">Using inline CSS </p>
+
+          <!-- formatting bold ,italic ,small ,del mark, sup script ,subscript -->
+          <b>BOLD</b><br>
+          <i>its italc</i><br>
+          <small>Its small</small><br>
+          <p><strike>Lets strike it</strike></p>
+          <p><del>Can also use del</del></p>
+          <p>lets <mark>mark</mark> it</p>
+
+          <!-- super script tag-->
+          <p>x<sup>2</sup></p>
+          <!-- using subscript tag-->
+          <p>C<sub>2</sub>H<sub>5</sub>OH</p>
+          <!-- in line comment -->
+          <p> Its in line comment <!-- boy --></p>
+          <br/>
+          <br/>
+          <!-- making table -->
+          <!--
+           <table>
+               <tr>
+                    <td>Column 1</td>
+                    <td>Column 2</td>
+                    <td>Column 3</td>
+               </tr>
+               
+               <tr> 
+                    <td>c 1</td>
+                    <td>c 2</td>
+                    <td>c 3</td>
+               </tr>
+           </table>
+          -->
+          <!-- we can use th instead of td for heading-->
+          <!-- BETTER TO USE THE BELLOW ONE-->
+          <table>
+               <thead>
+               <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+               </tr>
+
+          </thead>
+          <tbody>
+               <tr> 
+                    <td>c 1</td>
+                    <td>c 2</td>
+                    <td>c 3</td>
+               </tr>
+          </tbody>
+          <tfoot>
+               <td>ok</td>
+               <td>ok</td>
+               <td>ok</td>
+          </tfoot>
+
+          </table>
+
+
+          <!-- its better to use a table bellow-->
+          <!-- Text input -->
+          <table>
+          <p>Welcome to imput page</p> 
+          <label for="Samrat">TextInput</label>
+          <input type="text" name="Samrat">
+          <input type="radio">
+          <input type="checkbox">
+          <button>Submit</button>
+          </table>
+          <br/>
+          <br/>
+          <!-- the above is a form and can be also implemented as follows-->
+          <h2>Welcome to input page</h2>
+          <form action="https://youtu.be/8iuLXODzL04?si=dK1R2EfJM9iujJ7q">
+               <label for="username" name="Username">USERNAME</label>
+               <input type="text" name="username">
+               <br>
+               <label for="password" name="password">PASSWORD</label>
+               <input type="password" name="password">
+               <br>
+               <input type="submit" value="Submit">
+          </form>
+           <br/>
+           <br/>
+           <br/>
+           <!-- making different size table with color-->
+           <h2>makeing different size table</h2>
+           <br/>
+           
+            <table>
+               <colgroup>
+                    <col span="1" style="background-color: red;">
+                    <col span="1" style="background-color: #ffff00;">
+                    <col span="1" style="background-color: green;">
+               </colgroup>
+
+               <tr>
+                    <th colspan="2">
+                         Month
+                    </th>
+                    <th>Amount</th>
+                    
+               </tr>
+              
+               <tr>
+                
+                    <td>Jan</td>
+                    <td>1st</td>
+                    <td>100</td>
+               </tr>
+               <tr>
+                    <td>Feb</td>
+                    <td>2nd</td>
+                    <td>200</td>
+               </tr>
+            </table>
+            <!-- for quoting someone's words we can use blockquotes -->
+            <br/>
+            <blockquote>
+               <p>"This is a quote of Samrat Ray"</p>
+               <cite>
+                    --Time magazine
+               </cite>
+            </blockquote>
+            <!-- cite tag is used to quote the text from where a quote is taken -->
+            <br/>
+            <!-- for calling a particular number we can use the following syntax-->
+            <a href="tel:+917908706657">Call Me</a>
+            <br/>
+            <!-- for mailing someone we can use the following-->
+            <a href="mailto:samratrayofficial@gmail.com" id="2">Mail Us</a> 
+            <br/>
+            <!--using div-->
+            <div>this is useful</div>
+            <div>nah its not</div>
+            <br/>
+            <!-- we can put div inside a class-->
+            <div class="a">inside a div</div>
+            <div class="a">yup</div>
+            <!-- span and div is more or less same but div is a block element but span is a inline element-->
+            <!-- 
+               div- block element
+               span- inline element
+            -->
+          <!-- footer tag use
+          1>author
+          2>copyright
+          3>Term of use
+          4>privacy policy
+           5>Refund policy
+          -->
+          <br/>
+          <br/>
+          <iframe src="https://youtu.be/by4SYYWlhEs?si=umpA-ivBu_87yb8X">Its Fav Song</iframe>
+          <footer>
+               <p>Its the footer</p>
+          </footer>
+         
+          
+
+     </body>
+</html> 
+<!-- we can use strong or b for making it bold-->
