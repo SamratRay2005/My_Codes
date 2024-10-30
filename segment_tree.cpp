@@ -3,38 +3,59 @@ using namespace std;
 #define pb push_back
 #define ll long long
 
-void built(int ind , int low , int high, int arr[] , int seg[])
-{
-    if (low == high)
+class SGTree{
+    public:
+    vector<int> seg;
+    SGTree(int n)
     {
-        seg[ind] = arr[low];
-        return;
+        // 4*n is proved to be the safe size of segment tree
+        seg.resize(4*n+1);
     }
-    int mid = (low + high)/2;
-    built(2*ind + 1 , low , mid , arr , seg);
-    built(2*ind + 2 , mid + 1 , high , arr , seg);
-    seg[ind] = min(seg[2*ind + 1], seg[2*ind + 2]); 
-}
+    void built(int ind , int low , int high, int arr[])
+    {
+        if (low == high)
+        {
+            seg[ind] = arr[low];
+            return;
+        }
+        int mid = (low + high)/2;
+        built(2*ind + 1 , low , mid , arr);
+        built(2*ind + 2 , mid + 1 , high , arr);
+        seg[ind] = min(seg[2*ind + 1], seg[2*ind + 2]); 
+    }
 
-// l and r are the ranges given in quary
-int quary(int ind , int low , int high ,int l , int r , int seg[])
-{
-    // no overlap case (r<low || high<l)
-    if (l > high || r < low)
+    // l and r are the ranges given in quary
+    int quary(int ind , int low , int high ,int l , int r)
     {
-        return INT_MAX;
+        // no overlap case (r<low || high<l)
+        if (l > high || r < low)
+        {
+            return INT_MAX;
+        }
+        // complete overlap
+        if (low>=l && high>=r)
+        {
+            return seg[ind];
+        }
+        // partial overlap (go left then go right then min of both)
+        int mid = (low + high)/2;
+        int left = quary(2*ind+1 , low , mid ,l ,r);
+        int right = quary(2*ind+1 , mid+1 , high ,l ,r);
+        return min(left,right);
     }
-    // complete overlap
-    if (low>=l && high>=r)
+    void update(int ind , int low ,int high , int i , int val)
     {
-        return seg[ind];
+        if (low == high)
+        {
+            seg[ind] = val;
+        }
+        int mid = (low + high)/2;
+        if (i<=mid) update(2*ind+1 , low , mid ,i ,  val);
+        else update(2*ind+2 , mid+1 , high ,i ,   val);
+        seg[ind] = min(seg[2*ind + 1], seg[2*ind + 2]); 
     }
-    // partial overlap (go left then go right then min of both)
-    int mid = (low + high)/2;
-    int left = quary(2*ind+1 , low , mid ,l ,r , seg);
-    int right = quary(2*ind+1 , mid+1 , high ,l ,r , seg);
-    return min(left,right);
-}
+};
+
 int main(){
    ios_base::sync_with_stdio(false);cin.tie(NULL);
    ll n;
@@ -44,16 +65,15 @@ int main(){
    {
         cin >> arr[i];
    }
-   // 4*n is proved to be the safe size of segment tree
-   int seg[4*n];
-   built(0 , 0 , n-1 , arr, seg);
+   SGTree sg1(n);
+   sg1.built(0 , 0 , n-1 , arr);
    int q;
    cin >> q;
    while (q--)
    {
     int l , r;
     cin >> l >> r;
-    cout << quary(0 , 0 , n-1 , l-1 , r-1 , seg) << endl;
+    cout << sg1.quary(0 , 0 , n-1 , l-1 , r-1) << endl;
    }
 
 }
