@@ -48,6 +48,7 @@ class SGTree{
         if (low == high)
         {
             seg[ind] = val;
+            return;
         }
         int mid = (low + high)/2;
         if (i<=mid) update(2*ind+1 , low , mid ,i ,  val);
